@@ -38,3 +38,14 @@ body {
 .layout {
   min-height: 100vh;
 }
+
+// ===== Invertir orden: panel negro a la derecha, formulario a la izquierda =====
+.layout {
+  .login-brand-panel-inah {
+    order: 2;
+  }
+
+  > .content {
+    order: 1;
+  }
+}
