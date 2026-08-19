@@ -23,7 +23,7 @@
   .login-brand-panel-inah__top-logo {
     position: absolute;
     top: 2rem;
-    left: calc(50% + 2rem);
+    left: 2rem;
     max-height: 40px;
     width: auto;
     z-index: 10;
@@ -48,4 +48,10 @@ body {
   > .content {
     order: 1;
   }
+}
+
+// ===== Apagar el glow azul decorativo (::before de Paragon en .layout) =====
+[dir='ltr'] #root .layout::before {
+  box-shadow: none !important;
+  content: none !important;
 }
