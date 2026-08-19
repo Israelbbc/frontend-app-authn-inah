@@ -29,3 +29,12 @@
     z-index: 10;
   }
 }
+
+// ===== Eliminar degradado de fondo y asegurar altura completa =====
+body {
+  background: #ffffff !important;
+}
+
+.layout {
+  min-height: 100vh;
+}
