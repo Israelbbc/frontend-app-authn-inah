@@ -72,7 +72,7 @@ body {
 
 // ===== Centrar verticalmente el formulario (tabs + campos) dentro del panel blanco =====
 #root .content {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
