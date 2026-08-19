@@ -55,3 +55,17 @@ body {
   box-shadow: none !important;
   content: none !important;
 }
+
+// ===== Igualar especificidad con #root .layout para vencer el padding/background base =====
+#root .layout {
+  padding: 0 !important;
+  background: none !important;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  #root .layout {
+    padding: 0 !important;
+  }
+}
