@@ -9,9 +9,14 @@ import {
   ImageExtraSmallLayout, ImageLargeLayout, ImageMediumLayout, ImageSmallLayout,
 } from './components/image-layout';
 import { AuthLargeLayout, AuthMediumLayout, AuthSmallLayout } from './components/welcome-page-layout';
+import logoAulaInahH from '../assets/aula-INAH-H.png';
 
 const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
   const enableImageLayout = getConfig().ENABLE_IMAGE_LAYOUT;
+
+  const topLogo = !showWelcomeBanner && (
+    <img src={logoAulaInahH} alt="Aula INAH" className="login-brand-panel-inah__top-logo" />
+  );
 
   if (enableImageLayout) {
     return (
@@ -29,6 +34,7 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
           {showWelcomeBanner ? <AuthLargeLayout fullName={fullName} /> : <ImageLargeLayout />}
         </MediaQuery>
         <div className={classNames('content', { 'align-items-center mt-0': showWelcomeBanner })}>
+          {topLogo}
           {children}
         </div>
       </div>
@@ -49,6 +55,7 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
           {showWelcomeBanner ? <AuthLargeLayout fullName={fullName} /> : <DefaultLargeLayout />}
         </MediaQuery>
         <div className={classNames('content', { 'align-items-center mt-0': showWelcomeBanner })}>
+          {topLogo}
           {children}
         </div>
       </div>

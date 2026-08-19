@@ -15,3 +15,17 @@
     height: auto;
   }
 }
+
+// ===== Logo institucional en la esquina superior del panel blanco =====
+.layout {
+  position: relative;
+
+  .login-brand-panel-inah__top-logo {
+    position: absolute;
+    top: 2rem;
+    left: calc(50% + 2rem);
+    max-height: 40px;
+    width: auto;
+    z-index: 10;
+  }
+}
